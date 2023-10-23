@@ -1,0 +1,73 @@
+.container{
+  padding: 10px;
+}
+
+
+header{
+  border: 1px solid red;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.box{
+  display: flex;
+  flex-direction: row;
+
+}
+
+.content{
+  display: flex;
+  flex-direction: column;
+ margin: 10px 0px;
+}
+
+.order-box{
+  width: 25%;
+  border: 1px solid black;
+  margin: 10px 0px;
+}
+
+.food-content{
+  display: flex;
+  flex-direction: row;
+  padding: 5px;
+  border: 1px solid blue;
+
+}
+
+.food{
+  border: 1px solid green;
+  padding: 10px;
+
+}
+.food .box-one{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  border: 1px solid green;
+}
+
+
+.food .box-two{
+  display: flex;
+  flex-direction: column;
+  height: 120px;
+  border: 1px solid green;
+  margin-top: 20px;
+  position: relative;
+}
+.food .box-one h3{
+  background-color: rgb(67, 161, 90);
+  border-radius: 5px;
+}
+
+.food .box-two button{
+  position: absolute;
+width: 60px;
+bottom: 0;
+background-color: rgb(65, 145, 219);
+border: transparent;
+border-radius: 5px;
+font-size: large;
+}
