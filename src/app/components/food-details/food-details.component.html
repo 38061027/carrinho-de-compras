@@ -1,0 +1,20 @@
+
+<div *ngIf="food" class="container">
+
+  <img [src]="food.img" alt="{{ food.name }}">
+
+
+<div class="food-content">
+<div class="content">
+
+      <h2 >{{ food.name }}</h2>
+      <p >Valor: {{ food.valor }}</p>
+      <p class="desc">{{ food.descricao }}</p>
+      <button routerLink="" class="btn">Voltar</button>
+</div>
+
+</div>
+
+</div>
+
+

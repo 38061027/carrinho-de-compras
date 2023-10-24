@@ -1,17 +1,35 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.scss']
 })
-export class HomeComponent {
+export class HomeComponent implements OnInit{
 
-  list: any[] = [
-    {name:'Arroz', valor:'20,34 R$', img:'https://content.news.ifood.com.br/uploads/2023/05/ifn-capa-hamb.webp',
-  descricao:' ng Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English.'},
-    {name:'Feijão', valor:'22,34 R$', img:'https://www.portaldoagronegocio.com.br/img/cache/cover//storage/images/notices/64ca425c2f2a7.jpg',
-  descricao:' ng Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English.'},
-  ]
+  foods!: any[]
+
+
+constructor(
+  private route: Router,
+  private service: SharedService
+  ){}
+
+
+  getFood(){
+    this.service.getFood().subscribe(
+      res => this.foods =res
+    )
+  }
+
+  ngOnInit(): void {
+      this.getFood()
+  }
+
+  onSelect(item:any){
+  this.route.navigate(['/details', item.id])
+  }
 
 }
