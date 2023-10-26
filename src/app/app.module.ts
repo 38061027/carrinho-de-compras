@@ -7,6 +7,8 @@ import { HomeComponent } from './components/home/home.component';
 import { MyOrderComponent } from './components/my-order/my-order.component';
 import { FoodDetailsComponent } from './components/food-details/food-details.component';
 import { HttpClientModule } from '@angular/common/http';
+import { StoreModule } from '@ngrx/store';
+import { appReducer } from './store/app.state';
 
 
 @NgModule({
@@ -19,7 +21,8 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    StoreModule.forRoot({ app:appReducer })
   ],
   providers: [],
   bootstrap: [AppComponent]

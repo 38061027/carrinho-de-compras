@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-my-order',
@@ -6,5 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./my-order.component.scss']
 })
 export class MyOrderComponent {
+
+  @Input() food!:any
+  @Input() quantidade:any =0
+  @Input() pay:number =0
+
+
+
 
 }
