@@ -9,9 +9,7 @@
     <div class="order-box">
 
 
-        <app-my-order [food]="(nameFood$ | async) || ''" [quantidade]="(counter$ | async) || 0" [pay]="pagar"></app-my-order>
-
-
+      <app-my-order></app-my-order>
     </div>
     <div class="content">
 
@@ -27,7 +25,7 @@
 
             <p>{{food.descricao}}</p>
 
-            <button (click)="onFood(food.name, food.valor)">Pedir</button>
+            <button (click)="onFood(food.name, food.valor); addFood(food)">Pedir</button>
     </div>
         </div>
   <a (click)="onSelect(food)" >

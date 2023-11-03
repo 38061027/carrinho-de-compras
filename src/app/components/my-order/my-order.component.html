@@ -1,9 +1,9 @@
-<div class="order">
+<div class="order" *ngFor="let food of food.items">
     <h4>Meus pedidos</h4>
-  
+
     <a>Mesa 1</a>
-    <a>Comida: {{food}}</a>
-    <a>Quantidade: {{quantidade}}</a>
-    <a>Valor: {{pay}}</a>
+    <a>Comida: {{food.name}}</a>
+    <a>Quantidade: </a>
+    <a>Valor: {{food.valor}}</a>
 </div>
 

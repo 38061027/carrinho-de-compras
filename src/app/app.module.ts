@@ -8,7 +8,8 @@ import { MyOrderComponent } from './components/my-order/my-order.component';
 import { FoodDetailsComponent } from './components/food-details/food-details.component';
 import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
-import { appReducer } from './store/app.state';
+import { cartFoodReducer } from './store/reducers/cart/cart.reducer';
+
 
 
 @NgModule({
@@ -22,7 +23,7 @@ import { appReducer } from './store/app.state';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    StoreModule.forRoot({ app:appReducer })
+    StoreModule.forRoot({cartFoodReducer:cartFoodReducer})
   ],
   providers: [],
   bootstrap: [AppComponent]

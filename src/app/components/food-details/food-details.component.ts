@@ -1,5 +1,7 @@
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
+
 import { SharedService } from 'src/app/services/shared.service';
 
 @Component({
@@ -10,12 +12,17 @@ import { SharedService } from 'src/app/services/shared.service';
 export class FoodDetailsComponent implements OnInit{
 
   id:string
-  food!: any
+  food: any
+
+
+
 
   constructor(
     private service: SharedService,
-    private route: ActivatedRoute){
+    private route: ActivatedRoute
+    ){
     this.id = this.route.snapshot.params['id']
+
   }
 
 
@@ -28,4 +35,9 @@ this.service.getFood().subscribe(
   }
 )
 }
+
+
+
+
+
 }
