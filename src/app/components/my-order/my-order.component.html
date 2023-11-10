@@ -3,7 +3,14 @@
 
     <a>Mesa 1</a>
     <a>Comida: {{food.name}}</a>
-    <a>Quantidade: </a>
+    <a>Quantidade:{{food.quantity}} </a>
     <a>Valor: {{food.valor}}</a>
-</div>
+  </div>
+
+
+  <div *ngFor="let y of f">
+    {{y}}
+
+  </div>
+
 

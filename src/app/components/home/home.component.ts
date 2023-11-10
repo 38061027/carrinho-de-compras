@@ -1,3 +1,4 @@
+
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
@@ -19,7 +20,7 @@ export class HomeComponent implements OnInit{
 constructor(
   private route: Router,
   private service: SharedService,
-  private store: Store<{cartFoodReducer:number}>
+  private store: Store<{cartFoodReducer:ICart}>
   ){
 
   }
@@ -39,13 +40,12 @@ constructor(
   this.route.navigate(['/details', item.id])
   }
 
-  addFood(food:ICart){
+  addFood(food:string[]){
     this.store.dispatch(addFood({item: food}))
+
 }
 
-  onFood(name:string , valor:string){
-    const pay = parseFloat(valor)
-    this.pagar +=pay
 
-  }
+
+
 }
