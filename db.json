@@ -3,30 +3,61 @@
     {
       "id": "1",
       "name": "X-Bacon",
-      "valor": "20,34 R$",
+      "valor": 35.99,
       "img": "https://s3-sa-east-1.amazonaws.com/deliveryon-uploads/products/traillerdoserginho/38_55afce99a2b36.png",
       "descricao": "ng Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English."
     },
     {
       "id": "2",
       "name": "X-Salada",
-      "valor": "22,34 R$",
+      "valor": 32.56,
       "img": "https://receitassupreme.net/wp-content/uploads/2022/04/75-1.jpg",
       "descricao": "ng Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English."
     },
     {
       "id": "3",
       "name": "X-Tudo",
-      "valor": "34,34 R$",
+      "valor": 45.76,
       "img": "https://www.receiteria.com.br/wp-content/uploads/receitas-de-x-tudo.jpg",
       "descricao": "ng Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English."
     },
     {
       "id": "4",
       "name": "X-Egg",
-      "valor": "34,34 R$",
+      "valor": 34.67,
       "img": "https://storage.googleapis.com/phygital_files/supermercadolevemais/uploads/produto/sand_xegg_burguer_leve_un_f024fbe8-e655-46e4-b602-89e812473178.png",
       "descricao": "ng Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English."
     }
+  ],
+  "pedidos": [
+    {
+      "name": [
+        "X-Bacon",
+        "X-Bacon",
+        "X-Bacon",
+        "X-Bacon",
+        "X-Bacon",
+        "X-Salada",
+        "X-Salada",
+        "X-Salada"
+      ],
+      "valor": 277.63,
+      "quantity": 8,
+      "id": 1
+    },
+    {
+      "name": [
+        "X-Bacon",
+        "X-Bacon",
+        "X-Bacon",
+        "X-Salada",
+        "X-Salada",
+        "X-Salada"
+      ],
+      "valor": 205.65,
+      "quantity": 6,
+      "id": 2
+    }
+
   ]
 }

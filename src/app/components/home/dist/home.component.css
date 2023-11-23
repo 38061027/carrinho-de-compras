@@ -1,88 +1,74 @@
-.container{
+.container {
   padding: 10px;
 }
 
-
-header{
-
+header {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
-button{
+button {
   cursor: pointer;
 }
 
-.box{
+.box {
   display: flex;
   flex-direction: row;
-
 }
 
-.content{
+.content {
   display: flex;
   flex-direction: column;
- margin: 10px 0px;
- gap:20px;
+  margin: 10px 0px;
+  gap: 20px;
 }
 
-.order-box{
+.order-box {
   width: 25%;
-
   margin: 10px 0px;
 }
 
-.food-content{
+.food-content {
   display: flex;
   flex-direction: row;
   padding: 5px;
-
   border: 1px solid green;
-
 }
 
-.food{
+.food {
   padding: 10px;
-
 }
-.food .box-one{
+
+.food .box-one {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
-
 }
 
-
-.food .box-two{
+.food .box-two {
   display: flex;
   flex-direction: column;
   height: 120px;
-
-
-
   margin-top: 20px;
   position: relative;
 }
-.food .box-one h3{
-  background-color: rgb(67, 161, 90);
+
+.food .box-one h3 {
+  background-color: #43a15a;
   border-radius: 5px;
 }
 
-.food .box-two button{
+.food .box-two button {
   position: absolute;
   width: 60px;
   bottom: 0;
-background-color: rgb(65, 145, 219);
-border: transparent;
-border-radius: 5px;
-font-size: large;
+  background-color: #4191db;
+  border: transparent;
+  border-radius: 5px;
+  font-size: large;
 }
 
-
-.food-img{
-
+.food-img {
   cursor: pointer;
-
 }
-

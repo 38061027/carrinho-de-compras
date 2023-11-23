@@ -1,16 +1,14 @@
-<div class="order" *ngFor="let food of food.items">
-    <h4>Meus pedidos</h4>
-
-    <a>Mesa 1</a>
-    <a>Comida: {{food.name}}</a>
-    <a>Quantidade:{{food.quantity}} </a>
-    <a>Valor: {{food.valor}}</a>
-  </div>
-
-
-  <div *ngFor="let y of f">
-    {{y}}
+<div class="order">
+  <h4>Meus pedidos</h4>
+  <a>Mesa 1</a>
+  <div *ngFor="let itemName of getObjectKeys(counter)">
+    <p> {{ itemName }} - {{ counter[itemName]}}</p>
 
   </div>
+  <a>Quantidade: {{ food.quantity }}</a>
+  <a>Total: {{ food.valor.toFixed(2) }} R$</a>
+
+
+</div>
 
 

@@ -1,8 +1,13 @@
-import { Component, Input } from '@angular/core';
+
+import { Component, Input, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Observable, map } from 'rxjs';
-import {  removeFood, reset } from 'src/app/store/actions/cart/cart.actions';
-import { ICart } from 'src/app/store/interfaces/cart';
+
+import { Observable, map  } from 'rxjs';
+import { AuthService } from 'src/app/auth/services/auth.service';
+import { ICart } from 'src/app/interface/cart.interface';
+import { SharedService } from 'src/app/services/shared.service';
+
+
 
 
 @Component({
@@ -11,35 +16,40 @@ import { ICart } from 'src/app/store/interfaces/cart';
   styleUrls: ['./my-order.component.scss']
 })
 export class MyOrderComponent {
+  food!: ICart
+  cartItems$: Observable<any>;
+  counter: any = {};
+  arr: any;
+ 
 
+  constructor(private auth: AuthService,
+    private service:SharedService,
+    private store: Store<{ cart: ICart }>) {
+    this.cartItems$ = store.select('cart');
+    this.cartItems$.subscribe((res) => {
+      this.food = res;
+      this.arr = res.name;
 
-  food:any
-
-  f:any[] = []
-  quantityItems$!: Observable<any>;
-
-  constructor(private store: Store<{cartFoodReducer:ICart}>){
-    this.quantityItems$ = store.select("cartFoodReducer");
-    this.quantityItems$.subscribe(
-      res => {
-        this.food = res
-        if (res && res.comidas) {
-          this.f.push(res.comidas.join(''));
-          console.log(this.f);
+      this.counter = {};
+      for (let i = 0; i < this.arr.length; i++) {
+        if (this.counter[this.arr[i]]) {
+          this.counter[this.arr[i]] += 1;
+        } else {
+          this.counter[this.arr[i]] = 1;
         }
-
-   
-
       }
-    )
+
+
+    });
   }
 
-  removeFood(id:number){
-    this.store.dispatch(removeFood({id:id}))
-}
-reset(){
-    this.store.dispatch(reset())
-}
+
+  getObjectKeys(obj: any): string[] {
+    return Object.keys(obj);
+  }
+
+
+
 
 
 }
