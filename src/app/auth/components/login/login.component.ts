@@ -11,7 +11,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class LoginComponent {
   form:any= this.fb.group({
-    mesa: [{ value: '1' }, [Validators.required]],
+    mesa: ['', [Validators.required]],
     password: ['', [Validators.required, Validators.minLength(10)]],
   });
 
@@ -24,6 +24,7 @@ export class LoginComponent {
     if (this.form.valid) {
       this.auth.login(this.form.value)
     }
+
 
   }
 

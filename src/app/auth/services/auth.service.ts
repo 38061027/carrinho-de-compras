@@ -8,6 +8,9 @@ import { Router } from '@angular/router';
 })
 export class AuthService {
 
+  private isAuthenticatedCostumer = false;
+  private isAuthenticatedAdmin = false;
+
   private loggedIn = new BehaviorSubject<boolean>(false)
 
 
@@ -19,7 +22,16 @@ export class AuthService {
   login(credentials:Credentials):void{
     localStorage.setItem('token',credentials.password)
     this.loggedIn.next(true);
-    this.router.navigate([''])
+
+
+    if (credentials.mesa === 'cliente') {
+      this.isAuthenticatedCostumer = true;
+      this.router.navigate([''])
+    }
+    if (credentials.mesa === 'admin') {
+      this.isAuthenticatedAdmin = true;
+      this.router.navigate(['/admin'])
+    }
   }
 
 
@@ -27,7 +39,14 @@ export class AuthService {
     localStorage.clear()
     this.loggedIn.next(false)
     this.router.navigate(['/login'])
+    this.isAuthenticatedCostumer = false;
+    this.isAuthenticatedAdmin = false;
   }
 
-
+  getIsAuthenticatedCostumer(): boolean {
+    return this.isAuthenticatedCostumer;
+  }
+  getIsAuthenticatedAdmin(): boolean {
+    return this.isAuthenticatedAdmin;
+  }
 }

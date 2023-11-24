@@ -10,6 +10,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { StoreModule } from '@ngrx/store';
 import { cartFoodReducer } from './store/cart.reducers';
 import { AuthModule } from './auth/auth.module';
+import { AdminComponent } from './components/admin/admin.component';
 
 
 
@@ -18,7 +19,8 @@ import { AuthModule } from './auth/auth.module';
     AppComponent,
     HomeComponent,
     MyOrderComponent,
-    FoodDetailsComponent
+    FoodDetailsComponent,
+    AdminComponent
   ],
   imports: [
     BrowserModule,

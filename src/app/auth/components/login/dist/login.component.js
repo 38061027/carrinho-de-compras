@@ -14,7 +14,7 @@ var LoginComponent = /** @class */ (function () {
         this.fb = fb;
         this.auth = auth;
         this.form = this.fb.group({
-            mesa: [{ value: '1' }, [forms_1.Validators.required]],
+            mesa: ['', [forms_1.Validators.required]],
             password: ['', [forms_1.Validators.required, forms_1.Validators.minLength(10)]]
         });
     }
