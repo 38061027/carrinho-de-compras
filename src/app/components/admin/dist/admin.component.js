@@ -12,7 +12,7 @@ var AdminComponent = /** @class */ (function () {
     function AdminComponent(service) {
         var _this = this;
         this.service = service;
-        this.service.getFood().subscribe(function (res) { return _this.orders = res; });
+        this.service.getOrders().subscribe(function (res) { return _this.orders = res; });
     }
     AdminComponent = __decorate([
         core_1.Component({

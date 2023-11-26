@@ -23,7 +23,7 @@ var AuthModule = /** @class */ (function () {
             imports: [
                 common_1.CommonModule,
                 forms_1.ReactiveFormsModule,
-                auth_routing_module_1.AuthRoutingModule
+                auth_routing_module_1.AuthRoutingModule,
             ]
         })
     ], AuthModule);

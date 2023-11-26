@@ -11,13 +11,16 @@ var core_1 = require("@angular/core");
 var SharedService = /** @class */ (function () {
     function SharedService(http) {
         this.http = http;
-        this.baseUrl = 'http://localhost:3000/foods';
+        this.baseUrl = 'http://localhost:3000';
     }
     SharedService.prototype.getFood = function () {
-        return this.http.get(this.baseUrl);
+        return this.http.get(this.baseUrl + "/foods");
     };
     SharedService.prototype.sendFood = function (pedidos) {
-        return this.http.post('http://localhost:3000/pedidos', pedidos);
+        return this.http.post(this.baseUrl + "/pedidos", pedidos);
+    };
+    SharedService.prototype.getOrders = function () {
+        return this.http.get(this.baseUrl + "/pedidos");
     };
     SharedService = __decorate([
         core_1.Injectable({

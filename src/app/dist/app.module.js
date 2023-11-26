@@ -18,6 +18,8 @@ var http_1 = require("@angular/common/http");
 var store_1 = require("@ngrx/store");
 var cart_reducers_1 = require("./store/cart.reducers");
 var auth_module_1 = require("./auth/auth.module");
+var admin_component_1 = require("./components/admin/admin.component");
+var animations_1 = require("@angular/platform-browser/animations");
 var AppModule = /** @class */ (function () {
     function AppModule() {
     }
@@ -27,14 +29,16 @@ var AppModule = /** @class */ (function () {
                 app_component_1.AppComponent,
                 home_component_1.HomeComponent,
                 my_order_component_1.MyOrderComponent,
-                food_details_component_1.FoodDetailsComponent
+                food_details_component_1.FoodDetailsComponent,
+                admin_component_1.AdminComponent
             ],
             imports: [
                 platform_browser_1.BrowserModule,
                 app_routing_module_1.AppRoutingModule,
                 http_1.HttpClientModule,
                 auth_module_1.AuthModule,
-                store_1.StoreModule.forRoot({ cart: cart_reducers_1.cartFoodReducer })
+                store_1.StoreModule.forRoot({ cart: cart_reducers_1.cartFoodReducer }),
+                animations_1.BrowserAnimationsModule
             ],
             providers: [],
             bootstrap: [app_component_1.AppComponent]

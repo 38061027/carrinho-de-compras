@@ -11,6 +11,7 @@ import { StoreModule } from '@ngrx/store';
 import { cartFoodReducer } from './store/cart.reducers';
 import { AuthModule } from './auth/auth.module';
 import { AdminComponent } from './components/admin/admin.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 
@@ -27,7 +28,8 @@ import { AdminComponent } from './components/admin/admin.component';
     AppRoutingModule,
     HttpClientModule,
     AuthModule,
-    StoreModule.forRoot({cart: cartFoodReducer})
+    StoreModule.forRoot({cart: cartFoodReducer}),
+    BrowserAnimationsModule
 
   ],
   providers: [],

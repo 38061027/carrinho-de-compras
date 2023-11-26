@@ -1,0 +1,13 @@
+<div class="container" *ngFor="let items of orders" >
+
+  <h1>Mesa {{items.id}}</h1>
+
+  <h3>Pedidos: {{items.name}}</h3>
+  <h3>Quantidade total: {{items.quantity}}</h3>
+  <h3>Valor total: {{items.valor}}</h3>
+
+  <div>
+    <button>Finalizar Pedido</button>
+    <button>Apagar Pedido</button>
+  </div>
+</div>

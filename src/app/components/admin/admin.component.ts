@@ -12,7 +12,7 @@ export class AdminComponent {
 
 constructor(private service: SharedService){
 
-  this.service.getFood().subscribe(
+  this.service.getOrders().subscribe(
     res => this.orders = res
   )
 
