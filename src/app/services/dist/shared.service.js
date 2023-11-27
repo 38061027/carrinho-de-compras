@@ -22,6 +22,9 @@ var SharedService = /** @class */ (function () {
     SharedService.prototype.getOrders = function () {
         return this.http.get(this.baseUrl + "/pedidos");
     };
+    SharedService.prototype.deleteOrder = function (id) {
+        return this.http["delete"](this.baseUrl + "/pedidos/" + id);
+    };
     SharedService = __decorate([
         core_1.Injectable({
             providedIn: 'root'

@@ -4,18 +4,36 @@ import { SharedService } from 'src/app/services/shared.service';
 @Component({
   selector: 'app-admin',
   templateUrl: './admin.component.html',
-  styleUrls: ['./admin.component.scss']
+  styleUrls: ['./admin.component.scss'],
 })
 export class AdminComponent {
+  orders!: any[];
 
-  orders!: any[]
+  counter: any = {};
 
-constructor(private service: SharedService){
+  arr: any;
 
-  this.service.getOrders().subscribe(
-    res => this.orders = res
-  )
+  constructor(private service: SharedService) {
+    this.service.getOrders().subscribe((res) => {
+      this.orders = res;
+      this.arr = res[0].name;
 
-}
+      this.counter = {};
+      for (let i = 0; i < this.arr.length; i++) {
+        if (this.counter[this.arr[i]]) {
+          this.counter[this.arr[i]] += 1;
+        } else {
+          this.counter[this.arr[i]] = 1;
+        }
+      }
+    });
+  }
 
+  deleteOrder(orderId: number) {
+    this.service.deleteOrder(orderId).subscribe(() => {
+      this.service.getOrders().subscribe((res) => {
+        this.orders = res;
+      });
+    });
+  }
 }

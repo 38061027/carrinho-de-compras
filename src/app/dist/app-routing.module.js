@@ -11,13 +11,11 @@ var core_1 = require("@angular/core");
 var router_1 = require("@angular/router");
 var home_component_1 = require("./components/home/home.component");
 var food_details_component_1 = require("./components/food-details/food-details.component");
-var can_active_guard_1 = require("./core/guards/can-active.guard");
 var admin_component_1 = require("./components/admin/admin.component");
-var can_active_admin_guard_1 = require("./core/guards/can-active-admin.guard");
 var routes = [
-    { path: '', component: home_component_1.HomeComponent, canActivate: [can_active_guard_1.canActiveGuard] },
-    { path: 'details/:id', component: food_details_component_1.FoodDetailsComponent, canActivate: [can_active_guard_1.canActiveGuard] },
-    { path: 'admin', component: admin_component_1.AdminComponent, canActivate: [can_active_admin_guard_1.canActiveAdminGuard] },
+    { path: '', component: home_component_1.HomeComponent },
+    { path: 'details/:id', component: food_details_component_1.FoodDetailsComponent },
+    { path: 'admin', component: admin_component_1.AdminComponent },
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {

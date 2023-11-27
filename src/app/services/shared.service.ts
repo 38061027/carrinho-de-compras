@@ -21,4 +21,10 @@ export class SharedService {
   getOrders():Observable<any[]> {
     return this.http.get<any[]>(`${this.baseUrl}/pedidos`);
    }
+
+   deleteOrder(id: number) {
+    return this.http.delete(`${this.baseUrl}/pedidos/${id}`);
+  }
+
+
 }

@@ -1,47 +1,30 @@
 <div class="container">
-
   <header>
     <h1 class="title">Cardápio</h1>
-
   </header>
-<div class="box">
-
+  <div class="box">
     <div class="order-box">
-
       <app-my-order></app-my-order>
       <button (click)="sendFood()">Fazer Pedido</button>
-
     </div>
 
     <div class="content">
-
-
       <section class="food-content" *ngFor="let food of foods">
-
         <div class="food">
           <div class="box-one">
-            <h3 class="food-title">{{food.name}}</h3>
-            <h3 class="price">{{food.valor}} R$</h3>
-
+            <h3 class="food-title">{{ food.name }}</h3>
+            <h3 class="price">{{ food.valor }} R$</h3>
           </div>
-    <div class="box-two">
-
-            <p>{{food.descricao}}</p>
+          <div class="box-two">
+            <p>{{ food.descricao }}</p>
 
             <button (click)="addFood(food)">Pedir</button>
-    </div>
+          </div>
         </div>
-  <a (click)="onSelect(food)" >
-
-          <img class="food-img" [src]="food.img" width=200px height="200px">
-
-
-  </a>
+        <a (click)="onSelect(food)">
+          <img class="food-img" [src]="food.img" width="200px" height="200px" />
+        </a>
       </section>
-
-
-
     </div>
+  </div>
 </div>
-</div>
-

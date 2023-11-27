@@ -12,8 +12,29 @@ var AdminComponent = /** @class */ (function () {
     function AdminComponent(service) {
         var _this = this;
         this.service = service;
-        this.service.getOrders().subscribe(function (res) { return _this.orders = res; });
+        this.counter = {};
+        this.service.getOrders().subscribe(function (res) {
+            _this.orders = res;
+            _this.arr = res[0].name;
+            _this.counter = {};
+            for (var i = 0; i < _this.arr.length; i++) {
+                if (_this.counter[_this.arr[i]]) {
+                    _this.counter[_this.arr[i]] += 1;
+                }
+                else {
+                    _this.counter[_this.arr[i]] = 1;
+                }
+            }
+        });
     }
+    AdminComponent.prototype.deleteOrder = function (orderId) {
+        var _this = this;
+        this.service.deleteOrder(orderId).subscribe(function () {
+            _this.service.getOrders().subscribe(function (res) {
+                _this.orders = res;
+            });
+        });
+    };
     AdminComponent = __decorate([
         core_1.Component({
             selector: 'app-admin',
