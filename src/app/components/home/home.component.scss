@@ -1,5 +1,6 @@
 .container {
   padding: 10px;
+  
 }
 
 header {
@@ -28,6 +29,10 @@ button {
   width: 25%;
 
   margin: 10px 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
 }
 
 .food-content {
@@ -72,4 +77,11 @@ button {
 
 .food-img {
   cursor: pointer;
+}
+
+
+.btn-order{
+  background-color: #1E90FF;
+  border: transparent;
+  padding: 5px;
 }

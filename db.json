@@ -55,6 +55,49 @@
       "valor": 151.09,
       "quantity": 4,
       "id": 2
+    },
+    {
+      "name": [
+        "X-Salada",
+        "X-Egg",
+        "X-Egg",
+        "X-Tudo",
+        "X-Salada",
+        "X-Bacon"
+      ],
+      "valor": 216.21,
+      "quantity": 6,
+      "id": 3
+    },
+    {
+      "name": [
+        "X-Bacon",
+        "X-Bacon",
+        "X-Bacon"
+      ],
+      "valor": 107.97,
+      "quantity": 3,
+      "id": 4
+    },
+    {
+      "name": [
+        "X-Bacon",
+        "X-Salada",
+        "X-Salada"
+      ],
+      "valor": 101.11000000000001,
+      "quantity": 3,
+      "id": 5
+    },
+    {
+      "name": [
+        "X-Bacon",
+        "X-Salada",
+        "X-Salada"
+      ],
+      "valor": 101.11000000000001,
+      "quantity": 3,
+      "id": 6
     }
   ]
 }

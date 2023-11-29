@@ -26,7 +26,10 @@ export class AdminComponent {
           this.counter[this.arr[i]] = 1;
         }
       }
+
+   
     });
+
   }
 
   deleteOrder(orderId: number) {
