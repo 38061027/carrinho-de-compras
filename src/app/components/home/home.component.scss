@@ -1,6 +1,6 @@
 .container {
   padding: 10px;
-  
+
 }
 
 header {
@@ -84,4 +84,13 @@ button {
   background-color: #1E90FF;
   border: transparent;
   padding: 5px;
+}
+
+
+.btn-order:disabled {
+
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: white;
+
 }

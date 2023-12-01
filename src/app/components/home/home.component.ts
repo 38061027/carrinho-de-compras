@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Store } from '@ngrx/store';
-import { Observable } from 'rxjs';
+import { Observable, map } from 'rxjs';
 import { ICart } from 'src/app/interface/cart.interface';
 
 import { SharedService } from 'src/app/services/shared.service';
@@ -17,6 +17,9 @@ export class HomeComponent implements OnInit {
 
   pedidos!: ICart;
 
+  qtd:Observable<number>
+  btn:boolean = true
+
   cartItems$: Observable<any>;
 
   constructor(
@@ -28,6 +31,21 @@ export class HomeComponent implements OnInit {
     this.cartItems$.subscribe((res) => {
       this.pedidos = res;
     });
+
+    this.qtd = this.store.select('cart').pipe(
+      map(cartState => cartState.quantity)
+    );
+
+      this.qtd.subscribe((value)=>{
+
+        if(value ==0){
+          this.btn = true
+        }else{
+          this.btn = false
+        }
+
+      })
+
   }
 
   getFood() {
@@ -49,4 +67,6 @@ export class HomeComponent implements OnInit {
   sendFood() {
     this.service.sendFood(this.pedidos).subscribe();
   }
+
+
 }

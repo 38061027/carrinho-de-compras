@@ -8,6 +8,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 exports.__esModule = true;
 exports.HomeComponent = void 0;
 var core_1 = require("@angular/core");
+var rxjs_1 = require("rxjs");
 var cart_actions_1 = require("src/app/store/cart.actions");
 var HomeComponent = /** @class */ (function () {
     function HomeComponent(route, service, store) {
@@ -15,9 +16,19 @@ var HomeComponent = /** @class */ (function () {
         this.route = route;
         this.service = service;
         this.store = store;
+        this.btn = true;
         this.cartItems$ = store.select('cart');
         this.cartItems$.subscribe(function (res) {
             _this.pedidos = res;
+        });
+        this.qtd = this.store.select('cart').pipe(rxjs_1.map(function (cartState) { return cartState.quantity; }));
+        this.qtd.subscribe(function (value) {
+            if (value == 0) {
+                _this.btn = true;
+            }
+            else {
+                _this.btn = false;
+            }
         });
     }
     HomeComponent.prototype.getFood = function () {

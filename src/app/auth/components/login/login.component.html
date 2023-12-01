@@ -1,6 +1,8 @@
 <div class="container">
   <div class="login-content">
-    <h1>Login</h1>
+    <div class="img-login">
+    <img class="img-hamburguer" src="assets/imgs/hamburguer.png" alt="">
+  </div>
     <form [formGroup]="form" class="form-content" (ngSubmit)="onSubmit()">
       <div class="box user">
         <label>Mesa</label>
@@ -18,7 +20,7 @@
       </div>
 
       <div class="btn-content">
-        <button type="submit" class="btn">Entrar</button>
+        <button [disabled]="!form.valid" type="submit" class="btn">Entrar</button>
       </div>
     </form>
   </div>

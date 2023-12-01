@@ -81,3 +81,9 @@ button {
   border: transparent;
   padding: 5px;
 }
+
+.btn-order:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  color: white;
+}
