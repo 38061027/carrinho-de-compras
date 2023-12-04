@@ -5,28 +5,74 @@
       "name": "X-Bacon",
       "valor": 35.99,
       "img": "https://s3-sa-east-1.amazonaws.com/deliveryon-uploads/products/traillerdoserginho/38_55afce99a2b36.png",
-      "descricao": "ng Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English."
+      "descricao": "O X-Bacon é um irresistível e suculento sanduíche que combina elementos clássicos para criar uma experiência gastronômica cheia de sabor e textura. Com uma base de pão de hambúrguer, este prato delicioso apresenta um hambúrguer suculento, geralmente temperado e grelhado à perfeição. ",
+      "ingredients": [
+        "Pão",
+        "Hamburguer",
+        "Bacon",
+        "Queijo",
+        "Alface",
+        "Tomate"
+      ]
     },
     {
       "id": "2",
       "name": "X-Salada",
       "valor": 32.56,
       "img": "https://receitassupreme.net/wp-content/uploads/2022/04/75-1.jpg",
-      "descricao": "ng Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English."
+      "descricao": "O X-Salada é um apetitoso e equilibrado sanduíche que combina a suculência da carne com a frescura dos vegetais, proporcionando uma experiência gastronômica completa. Este saboroso prato inicia-se com um hambúrguer, geralmente grelhado à perfeição e temperado para acentuar seu sabor robusto.",
+      "ingredients": [
+        "Pão",
+        "Hamburguer",
+        "Queijo",
+        "Alface",
+        "Tomate"
+      ]
     },
     {
       "id": "3",
       "name": "X-Tudo",
       "valor": 45.76,
       "img": "https://www.receiteria.com.br/wp-content/uploads/receitas-de-x-tudo.jpg",
-      "descricao": "ng Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English."
+      "descricao": "O X-Tudo é um sanduíche audacioso e recheado que leva a experiência de hambúrguer a um nível elevado. Esse deleite gastronômico começa com a base de um pão de hambúrguer, que se torna o palco para uma variedade emocionante de ingredientes.",
+      "ingredients": [
+        "Pão",
+        "Hamburguer",
+        "Bacon",
+        "Queijo",
+        "Presunto",
+        "Ovo",
+        "Maionese",
+        "Alface",
+        "Tomate"
+      ]
     },
     {
       "id": "4",
       "name": "X-Egg",
       "valor": 34.67,
       "img": "https://storage.googleapis.com/phygital_files/supermercadolevemais/uploads/produto/sand_xegg_burguer_leve_un_f024fbe8-e655-46e4-b602-89e812473178.png",
-      "descricao": "ng Lorem Ipsum is that it has a more-or-less normal distribution of letters, as opposed to using Content here, content here, making it look like readable English."
+      "descricao": "O X-Egg é um sanduíche que combina a deliciosa simplicidade do ovo com a satisfação substancial do hambúrguer, criando uma experiência gastronômica única. Este apetitoso prato começa com uma base de pão de hambúrguer, oferecendo a textura perfeita para abrigar uma série de ingredientes saborosos.",
+      "ingredients": [
+        "Pão",
+        "Hamburguer",
+        "Ovo",
+        "Queijo",
+        "Alface",
+        "Tomate"
+      ]
+    },
+    {
+      "id": "5",
+      "name": "X-Burguer",
+      "valor": 29.67,
+      "img": "https://s3-sa-east-1.amazonaws.com/deliveryon-uploads/products/mega/66_608cc442ac41c.png",
+      "descricao": "O X-Burger é a personificação da simplicidade e sabor no universo dos hambúrgueres. Este clássico sanduíche começa com uma base de pão de hambúrguer, fornecendo a estrutura ideal para uma experiência gastronômica satisfatória.",
+      "ingredients": [
+        "Pão",
+        "Hamburguer",
+        "Queijo"
+      ]
     }
   ],
   "pedidos": [
@@ -78,6 +124,20 @@
       "valor": 107.97,
       "quantity": 3,
       "id": 4
+    },
+    {
+      "name": [
+        "X-Bacon",
+        "X-Bacon",
+        "X-Salada",
+        "X-Burguer",
+        "X-Burguer",
+        "X-Burguer",
+        "X-Egg"
+      ],
+      "valor": 228.22000000000003,
+      "quantity": 7,
+      "id": 5
     }
   ]
 }

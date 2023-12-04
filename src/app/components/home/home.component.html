@@ -13,12 +13,16 @@
         <div class="food">
           <div class="box-one">
             <h3 class="food-title">{{ food.name }}</h3>
-            <h3 class="price">{{ food.valor }} R$</h3>
+            <h3 class="price">{{ food.valor | currency:'BRL'}}</h3>
           </div>
           <div class="box-two">
             <p>{{ food.descricao }}</p>
 
-            <button (click)="addFood(food)">Pedir</button>
+
+              <button (click)="addFood(food)">Pedir</button>
+          
+
+
           </div>
         </div>
         <a (click)="onSelect(food)">
