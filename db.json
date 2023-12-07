@@ -138,6 +138,17 @@
       "valor": 228.22000000000003,
       "quantity": 7,
       "id": 5
+    },
+    {
+      "name": [
+        "X-Bacon",
+        "X-Bacon",
+        "X-Egg",
+        "X-Burguer"
+      ],
+      "valor": 136.32,
+      "quantity": 4,
+      "id": 6
     }
   ]
 }

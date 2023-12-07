@@ -1,29 +1,23 @@
-
-
-
 <div *ngIf="food" class="container">
-
-
-  <img [src]="food.img" alt="{{ food.name }}">
-
-
-  <div class="food-content">
-    <div class="content">
-
-      <h1 >{{ food.name }}</h1>
-      <p class="desc">{{ food.descricao }}</p>
-      <p>
-        {{food.ingredients}}
-      </p>
-
-      <p >Valor: {{ food.valor | currency:'BRL' }}</p>
-      <i routerLink="" class="material-symbols-outlined">arrow_circle_left</i>
-      </div>
-
+  <div class="img-food">
+    <img [src]="food.img" alt="{{ food.name }}" />
   </div>
 
 
+    <div class="content">
+      <h1>{{ food.name }}</h1>
 
+
+      <p class="desc">{{ food.descricao }}</p>
+      <p>
+        {{ food.ingredients }}
+      </p>
+
+      <p>Valor: {{ food.valor | currency : "BRL" }}</p>
+
+
+      <div class="back" class="material-symbols-outlined">
+        <i class="material-symbols-outlined" routerLink="">arrow_circle_left</i>
+      </div>
+  </div>
 </div>
-
-

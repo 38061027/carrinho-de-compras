@@ -55,3 +55,13 @@ button:hover {
 .buttons .delete-order {
   background-color: red;
 }
+
+@media (max-width: 1110px) {
+  .container {
+    height: auto;
+  }
+
+  .content {
+    width: 100%;
+  }
+}

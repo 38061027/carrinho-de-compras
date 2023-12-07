@@ -86,3 +86,33 @@ button {
   cursor: not-allowed;
   color: white;
 }
+
+@media (max-width: 850px) {
+  .container {
+    overflow: hidden;
+  }
+
+  .container .box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .box-two p {
+    display: none;
+  }
+
+  .food {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .food .box-one {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .order-box {
+    width: 100%;
+  }
+}
