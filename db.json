@@ -149,6 +149,36 @@
       "valor": 136.32,
       "quantity": 4,
       "id": 6
+    },
+    {
+      "name": [
+        "X-Bacon",
+        "X-Salada",
+        "X-Salada",
+        "X-Tudo"
+      ],
+      "valor": 146.87,
+      "quantity": 4,
+      "id": 7
+    },
+    {
+      "name": [
+        "X-Bacon",
+        "X-Salada",
+        "X-Salada"
+      ],
+      "valor": 101.11000000000001,
+      "quantity": 3,
+      "id": 8
+    },
+    {
+      "name": [
+        "X-Bacon",
+        "X-Bacon"
+      ],
+      "valor": 71.98,
+      "quantity": 2,
+      "id": 9
     }
   ]
 }

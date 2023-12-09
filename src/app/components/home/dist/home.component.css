@@ -87,6 +87,26 @@ button {
   color: white;
 }
 
+.msg-order {
+  margin-top: 20px;
+  display: flex;
+  align-self: center;
+}
+
+.material-symbols-outlined {
+  border: 1px solid #3ebe3e;
+  align-self: center;
+  border-radius: 50%;
+}
+
+.msg-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-top: 10px;
+}
+
 @media (max-width: 850px) {
   .container {
     overflow: hidden;

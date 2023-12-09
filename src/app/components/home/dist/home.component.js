@@ -17,6 +17,8 @@ var HomeComponent = /** @class */ (function () {
         this.service = service;
         this.store = store;
         this.btn = true;
+        this.btnOrder = false;
+        this.sendOrder = false;
         this.cartItems$ = store.select('cart');
         this.cartItems$.subscribe(function (res) {
             _this.pedidos = res;
@@ -46,6 +48,9 @@ var HomeComponent = /** @class */ (function () {
     };
     HomeComponent.prototype.sendFood = function () {
         this.service.sendFood(this.pedidos).subscribe();
+        this.btn = true;
+        this.btnOrder = true;
+        this.sendOrder = true;
     };
     HomeComponent = __decorate([
         core_1.Component({

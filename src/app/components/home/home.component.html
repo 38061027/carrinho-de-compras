@@ -5,7 +5,18 @@
   <div class="box">
     <div class="order-box">
       <app-my-order></app-my-order>
-      <button [disabled]="btn" class="btn-order" (click)="sendFood()">Fazer Pedido</button>
+      <button [disabled]="btn" class="btn-order" (click)="sendFood()">
+        Fazer Pedido
+      </button>
+
+      <div class="msg-order">
+        <ng-container *ngIf="sendOrder">
+          <div class="msg-content">
+            <p>Pedido Enviado</p>
+            <p class="material-symbols-outlined">done</p>
+          </div>
+        </ng-container>
+      </div>
     </div>
 
     <div class="content">
@@ -13,16 +24,12 @@
         <div class="food">
           <div class="box-one">
             <h3 class="food-title">{{ food.name }}</h3>
-            <h3 class="price">{{ food.valor | currency:'BRL'}}</h3>
+            <h3 class="price">{{ food.valor | currency : "BRL" }}</h3>
           </div>
           <div class="box-two">
             <p>{{ food.descricao }}</p>
 
-
-              <button (click)="addFood(food)">Pedir</button>
-          
-
-
+            <button [disabled]="btnOrder" (click)="addFood(food)">Pedir</button>
           </div>
         </div>
         <a (click)="onSelect(food)">

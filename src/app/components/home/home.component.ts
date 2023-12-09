@@ -19,6 +19,9 @@ export class HomeComponent implements OnInit {
 
   qtd:Observable<number>
   btn:boolean = true
+  btnOrder:boolean = false
+  sendOrder: boolean = false
+
 
   cartItems$: Observable<any>;
 
@@ -66,6 +69,9 @@ export class HomeComponent implements OnInit {
 
   sendFood() {
     this.service.sendFood(this.pedidos).subscribe();
+    this.btn = true
+    this.btnOrder = true
+    this.sendOrder = true
   }
 
 
