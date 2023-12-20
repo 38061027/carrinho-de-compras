@@ -179,6 +179,16 @@
       "valor": 71.98,
       "quantity": 2,
       "id": 9
+    },
+    {
+      "name": [
+        "X-Bacon",
+        "X-Salada",
+        "X-Salada"
+      ],
+      "valor": 101.11000000000001,
+      "quantity": 3,
+      "id": 10
     }
   ]
 }

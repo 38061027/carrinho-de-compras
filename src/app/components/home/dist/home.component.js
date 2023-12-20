@@ -35,7 +35,7 @@ var HomeComponent = /** @class */ (function () {
     }
     HomeComponent.prototype.getFood = function () {
         var _this = this;
-        this.service.getFood().subscribe(function (res) { return (_this.foods = res); });
+        this.service.getFood().subscribe(function (res) { return (_this.foods = res.foods); });
     };
     HomeComponent.prototype.ngOnInit = function () {
         this.getFood();

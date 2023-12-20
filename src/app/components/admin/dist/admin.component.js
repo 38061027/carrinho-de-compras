@@ -14,7 +14,7 @@ var AdminComponent = /** @class */ (function () {
         this.service = service;
         this.counter = {};
         this.service.getOrders().subscribe(function (res) {
-            _this.orders = res;
+            _this.orders = res.pedidos;
             _this.arr = res[0].name;
             _this.counter = {};
             for (var i = 0; i < _this.arr.length; i++) {

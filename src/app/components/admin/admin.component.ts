@@ -14,8 +14,8 @@ export class AdminComponent {
   arr: any;
 
   constructor(private service: SharedService) {
-    this.service.getOrders().subscribe((res) => {
-      this.orders = res;
+    this.service.getOrders().subscribe((res:any) => {
+      this.orders = res.pedidos;
       this.arr = res[0].name;
 
       this.counter = {};
@@ -27,7 +27,7 @@ export class AdminComponent {
         }
       }
 
-   
+
     });
 
   }

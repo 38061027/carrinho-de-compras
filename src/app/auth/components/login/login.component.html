@@ -1,26 +1,58 @@
 <div class="container">
   <div class="login-content">
     <div class="img-login">
-    <img class="img-hamburguer" src="assets/imgs/hamburguer.png" alt="">
-  </div>
+      <img class="img-hamburguer" src="assets/imgs/hamburguer.png" alt="" />
+    </div>
     <form [formGroup]="form" class="form-content" (ngSubmit)="onSubmit()">
-      <div class="box user">
-        <label>Mesa</label>
-        <input formControlName="mesa" type="text" placeholder="Mesa" required />
-      </div>
+
+<div class="box-1">
+
+
+        <div class="box user">
+          <label>Usuário</label>
+          <input
+            formControlName="usuario"
+            type="text"
+            placeholder="cliente/admin"
+            required
+          />
+        </div>
+
+        <div class="invalid-password"
+        *ngIf="
+          form.get('usuario').invalid &&
+          (form.get('usuario').dirty || form.get('usuario').touched)
+        ">
+        Entre como cliente ou admin
+        </div>
+</div>
 
       <div class="box password">
-        <label>Senha</label>
-        <input
-          formControlName="password"
-          type="password"
-          placeholder="Senha"
-          required
-        />
+        <div>
+          <label>Senha</label>
+          <input
+            formControlName="password"
+            type="password"
+            placeholder="Senha"
+            required
+          />
+        </div>
+
+        <div
+        class="invalid-password"
+          *ngIf="
+            form.get('password').invalid &&
+            (form.get('password').dirty || form.get('password').touched)
+          "
+        >
+          Digite no mínimo 10 caracteres
+        </div>
       </div>
 
       <div class="btn-content">
-        <button [disabled]="!form.valid" type="submit" class="btn">Entrar</button>
+        <button [disabled]="!form.valid" type="submit" class="btn">
+          Entrar
+        </button>
       </div>
     </form>
   </div>

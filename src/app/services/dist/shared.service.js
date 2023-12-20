@@ -11,7 +11,7 @@ var core_1 = require("@angular/core");
 var SharedService = /** @class */ (function () {
     function SharedService(http) {
         this.http = http;
-        this.baseUrl = 'http://localhost:3000';
+        this.baseUrl = 'https://api-carrinho-38061027.vercel.app';
     }
     SharedService.prototype.getFood = function () {
         return this.http.get(this.baseUrl + "/foods");

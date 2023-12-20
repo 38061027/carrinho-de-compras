@@ -20,11 +20,11 @@ export class AuthService {
     localStorage.setItem('token', credentials.password);
     this.loggedIn.next(true);
 
-    if (credentials.mesa === 'cliente') {
+    if (credentials.usuario === 'cliente') {
       this.isAuthenticatedCostumer = true;
       this.router.navigate(['']);
     }
-    if (credentials.mesa === 'admin') {
+    if (credentials.usuario === 'admin') {
       this.isAuthenticatedAdmin = true;
       this.router.navigate(['/admin']);
     }

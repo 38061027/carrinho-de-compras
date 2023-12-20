@@ -9,7 +9,7 @@ import { ICart } from '../interface/cart.interface';
 export class SharedService {
   constructor(private http: HttpClient) {}
 
-  baseUrl: string = 'http://localhost:3000';
+  baseUrl: string = 'https://api-carrinho-38061027.vercel.app';
   getFood():Observable<any[]> {
    return this.http.get<any[]>(`${this.baseUrl}/foods`);
   }

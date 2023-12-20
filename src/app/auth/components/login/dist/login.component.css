@@ -68,3 +68,20 @@ label {
   color: white;
   opacity: 0.5;
 }
+
+.password {
+  display: flex;
+  flex-direction: column;
+}
+
+.invalid-password {
+  margin-top: 5px;
+  color: #b63434;
+}
+
+.box-1 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}

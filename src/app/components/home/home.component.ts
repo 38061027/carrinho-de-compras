@@ -52,7 +52,7 @@ export class HomeComponent implements OnInit {
   }
 
   getFood() {
-    this.service.getFood().subscribe((res) => (this.foods = res));
+    this.service.getFood().subscribe((res:any) => (this.foods = res.foods));
   }
 
   ngOnInit(): void {

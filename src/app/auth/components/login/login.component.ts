@@ -9,7 +9,7 @@ import { AuthService } from '../../services/auth.service';
 })
 export class LoginComponent {
   form: any = this.fb.group({
-    mesa: ['', [Validators.required]],
+    usuario: ['', [Validators.required]],
     password: ['', [Validators.required, Validators.minLength(10)]],
   });
 
